@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+</head>
+<body>
+
+    <h1>Playlist Project</h1>
+    <p class="para1">This app analyzes the spotify playlist called Top Music 2000-2022</p>
+    <form method="post" action="/">
+      <button class="btn" type="submit" value="VALUE1" name="action1">Click me to see results </button>
+    </form>
+    {% for x in var %}
+       <div class="w3-container boxes">
+       <p class="para2">
+       {% for i in x %}
+          <p class="para2"> {{ i }} </p>
+       {% endfor %}
+       </p></div><br>
+     {% endfor %}
+</body>
+</html>
